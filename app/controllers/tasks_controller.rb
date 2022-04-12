@@ -57,6 +57,16 @@ class TasksController < ApplicationController
     end
   end
 
+  def toggle
+    @task.update(completed: !@task.completed)
+
+    render turbo_stream: turbo_stream.replace(
+    @task,
+    partial: 'completed',
+    locales: { task: @task }
+    )
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_task

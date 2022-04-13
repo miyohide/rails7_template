@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: %i[ show edit update destroy ]
+  before_action :set_task, only: %i[ show edit update destroy toggle ]
 
   # GET /tasks or /tasks.json
   def index
@@ -63,7 +63,7 @@ class TasksController < ApplicationController
     render turbo_stream: turbo_stream.replace(
     @task,
     partial: 'completed',
-    locales: { task: @task }
+    locals: { task: @task }
     )
   end
 

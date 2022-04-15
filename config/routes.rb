@@ -5,4 +5,5 @@ Rails.application.routes.draw do
     end
   end
   resources :todos
+  resources :quotes
 end

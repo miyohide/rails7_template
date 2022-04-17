@@ -14,8 +14,8 @@ en:
       quote:
         name: Name
 
-    helpers:
-      submit:
-        quote:
-          create: Create quote
-          update: Update quote
+  helpers:
+    submit:
+      quote:
+        create: Create quote
+        update: Update quote

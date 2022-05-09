@@ -26,4 +26,4 @@ jobs:
       - name: Set up database schema
         run: bin/rails db:schema:load
       - name: Run tests
-        run: bin/rails test:system
+        run: bin/rails test:all

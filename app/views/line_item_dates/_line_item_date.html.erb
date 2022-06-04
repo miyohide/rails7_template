@@ -26,6 +26,8 @@
 
       <%= render line_item_date.line_items, quote: quote, line_item_date: line_item_date %>
 
+      <%= turbo_frame_tag nested_dom_id(line_item_date, LineItem.new) %>
+
       <div class="line-item-date__footer">
         <!-- Line Itemを追加するボタン -->
         <!-- Turboにてアイテムを追加する先のIDを生成する -->

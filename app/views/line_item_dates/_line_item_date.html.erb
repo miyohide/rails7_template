@@ -31,7 +31,7 @@
         <!-- Turboにてアイテムを追加する先のIDを生成する -->
         <%= link_to "Add item",
                     [:new, quote, line_item_date, :line_item],
-                    data: { turbo_frame: dom_id(LineItem.new, dom_id(line_item_date)) },
+                    data: { turbo_frame: nested_dom_id(line_item_date, LineItem.new) },
                     class: "btn btn--primary" %>
       </div>
     </div>

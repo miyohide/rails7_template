@@ -28,10 +28,10 @@
 
       <div class="line-item-date__footer">
         <!-- Line Itemを追加するボタン -->
-        <!-- data: { turbo_frame: "_top" } はTurboにクリックを奪われないようにするため -->
+        <!-- Turboにてアイテムを追加する先のIDを生成する -->
         <%= link_to "Add item",
                     [:new, quote, line_item_date, :line_item],
-                    data: { turbo_frame: "_top" },
+                    data: { turbo_frame: dom_id(LineItem.new, dom_id(line_item_date)) },
                     class: "btn btn--primary" %>
       </div>
     </div>

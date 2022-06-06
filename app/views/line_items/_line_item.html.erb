@@ -18,10 +18,12 @@
       <%= number_to_currency line_item.unit_price %>
     </div>
     <div class="line-item__actions">
+      <!-- 第二引数の配列は /quotes/quoteのid/line_item_dates/line_item_dateのid/line_item/line_itemのid を生成する -->
       <%= button_to "Delete",
                     [quote, line_item_date, line_item],
                     method: :delete,
                     class: "btn btn--light" %>
+      <!-- 第二引数の配列は /quotes/quoteのid/line_item_dates/line_item_dateのid/line_item/line_itemのid/edit を生成する -->
       <%= link_to "Edit",
                   [:edit, quote, line_item_date, line_item],
                   class: "btn btn--light" %>

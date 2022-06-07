@@ -1,2 +1,2 @@
-puts "\n== Seeding the dataabse with fixtures =="
+puts "\n== Seeding the database with fixtures =="
 system("bin/rails db:fixtures:load")

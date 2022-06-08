@@ -7,4 +7,9 @@ class Quote < ApplicationRecord
   scope :ordered, -> { order(id: :desc) }
 
   broadcasts_to -> (quote) { [quote.company, "quotes"] }, inserts_by: :prepend
+
+  # total_price はそれぞれのアイテムごとの total_price の合算値を返す
+  def total_price
+    line_items.sum(&:total_price)
+  end
 end

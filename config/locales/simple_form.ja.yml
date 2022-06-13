@@ -2,30 +2,30 @@ ja:
   simple_form:
     placeholders:
       quote:
-        name: Name of your quote
+        name: 見積名
       line_item:
-        name: Name of your item
-        description: Description (optional)
+        name: 商品名
+        description: 詳細 (オプション)
         quantity: 1
         unit_price: $100.00
     labels:
       quote:
-        name: Name
+        name: 見積名
       line_item:
-        name: Name
-        description: Description
-        quantity: Quantity
-        unit_price: Unit price
+        name: 商品名
+        description: 詳細
+        quantity: 量
+        unit_price: 単価
       line_item_date:
-        date: Date
+        date: 日付
   helpers:
     submit:
       quote:
-        create: Create quote
-        update: Update quote
+        create: 見積の作成
+        update: 見積の更新
       line_item:
-        create: Create item
-        update: Update item
+        create: 商品の追加
+        update: 商品の更新
       line_item_date:
-        create: Create date
-        update: Update date
+        create: 見積日付の作成
+        update: 見積日付の更新

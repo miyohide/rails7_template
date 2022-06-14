@@ -21,10 +21,10 @@ class LineItemSystemTest < ApplicationSystemTestCase
     end
     assert_selector "h1", text: "First quote"
 
-    fill_in "Name", with: "Animation"
-    fill_in "Quantity", with: 1
-    fill_in "Unit price", with: 1234
-    click_on "Create item"
+    fill_in "商品名", with: "Animation"
+    fill_in "量", with: 1
+    fill_in "単価", with: 1234
+    click_on "商品の追加"
 
     assert_selector "h1", text: "First quote"
     assert_text "Animation"
@@ -41,9 +41,9 @@ class LineItemSystemTest < ApplicationSystemTestCase
     end
     assert_selector "h1", text: "First quote"
 
-    fill_in "Name", with: "Capybara article"
-    fill_in "Unit price", with: 1234
-    click_on "Update item"
+    fill_in "商品名", with: "Capybara article"
+    fill_in "単価", with: 1234
+    click_on "商品の更新"
 
     assert_text "Capybara article"
     assert_text number_to_currency(1234)

@@ -18,10 +18,10 @@ class QuotesTest < ApplicationSystemTestCase
     assert_selector "h1", text: "Quotes"
 
     click_on "New quote"
-    fill_in "Name", with: "Capybara quote"
+    fill_in "見積名", with: "Capybara quote"
 
     assert_selector "h1", text: "Quotes"
-    click_on "Create quote"
+    click_on "見積の作成"
 
     assert_selector "h1", text: "Quotes"
     assert_text "Capybara quote"
@@ -32,10 +32,10 @@ class QuotesTest < ApplicationSystemTestCase
     assert_selector "h1", text: "Quotes"
 
     click_on "Edit", match: :first
-    fill_in "Name", with: "Updated quote"
+    fill_in "見積名", with: "Updated quote"
 
     assert_selector "h1", text: "Quotes"
-    click_on "Update quote"
+    click_on "見積の更新"
 
     assert_selector "h1", text: "Quotes"
     assert_text "Updated quote"

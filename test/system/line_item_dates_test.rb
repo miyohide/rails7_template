@@ -17,9 +17,9 @@ class LineItemDatesTest < ApplicationSystemTestCase
 
     click_on "New date"
     assert_selector "h1", text: "First quote"
-    fill_in "Date", with: Date.current + 1.day
+    fill_in "日付", with: Date.current + 1.day
 
-    click_on "Create date"
+    click_on "見積日付の作成"
     assert_text I18n.l(Date.current + 1.day, format: :long)
   end
 
@@ -32,8 +32,8 @@ class LineItemDatesTest < ApplicationSystemTestCase
 
     assert_selector "h1", text: "First quote"
 
-    fill_in "Date", with: Date.current + 1.day
-    click_on "Update date"
+    fill_in "日付", with: Date.current + 1.day
+    click_on "見積日付の更新"
 
     assert_text I18n.l(Date.current + 1.day, format: :long)
   end
